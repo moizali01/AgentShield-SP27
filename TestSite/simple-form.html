@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Support Pledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="tracker.js" defer></script>
+    <style>
+        /* Smooth reveal animation for dynamic fields */
+        
+        .reveal-field {
+            opacity: 0;
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .reveal-field.visible {
+            position: relative;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            pointer-events: auto;
+            animation: fadeSlideIn 0.35s ease forwards;
+        }
+        
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Step indicator */
+        .step-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: #d1d5db;
+            display: inline-block;
+            margin: 0 3px;
+            transition: background 0.3s;
+        }
+        .step-dot.active { background: #16a34a; }
+
+        /* Standard visible radio/checkboxes styling */
+        .plain-choice label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            color: #374151;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+<div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg my-8 sm:my-12">
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Panda Support Pledge</h1>
+    <p class="text-gray-500 text-sm mb-6">
+        Pledge your support for giant panda conservation. Fill in your details and we'll tailor
+        the form to your chosen way of helping.
+    </p>
+
+    <!-- Progress dots -->
+    <div id="progress-dots" class="flex items-center mb-8">
+        <span class="text-xs text-gray-400 mr-2">Progress:</span>
+        <span class="step-dot active" id="dot-1"></span>
+        <span class="step-dot" id="dot-2"></span>
+        <span class="step-dot" id="dot-3"></span>
+        <span class="step-dot" id="dot-4"></span>
+        <span class="step-dot" id="dot-5"></span>
+        <span class="step-dot" id="dot-6"></span>
+        <span class="step-dot" id="dot-7"></span>
+    </div>
+
+    <form id="pledge-form">
+
+        <!-- ── STEP 1: Full name ──────────────────────────────────── -->
+        <div class="mb-5">
+            <label for="full-name" class="block text-sm font-medium text-gray-700">
+                Full Name <span class="text-red-500">*</span>
+            </label>
+            <input type="text" id="full-name" name="full_name" autocomplete="name"
+                   class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                   required placeholder="Jane Doe">
+        </div>
+
+        <!-- ── STEP 2: Email (after name) ───────────────────────── -->
+        <div class="reveal-field mb-5" id="field-email">
+            <label for="email" class="block text-sm font-medium text-gray-700">
+                Email Address <span class="text-red-500">*</span>
+            </label>
+            <input type="email" id="email" name="email" autocomplete="email"
+                   class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                   required placeholder="jane@example.com">
+        </div>
+
+        <!-- ── STEP 3: Phone (after email) ───────────────────────── -->
+        <div class="reveal-field mb-5" id="field-phone">
+            <label for="phone" class="block text-sm font-medium text-gray-700">
+                Phone Number <span class="text-gray-400 font-normal">(optional)</span>
+            </label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"
+                   class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" 
+                   placeholder="+1 (555) 000-0000">
+            <p class="text-xs text-gray-400 mt-1">We only call if there's an urgent update about your pledge.</p>
+        </div>
+
+        <!-- ── STEP 4: Support type (after phone field is shown) ─── -->
+        <div class="reveal-field mb-5" id="field-support-type">
+            <p class="block text-sm font-medium text-gray-700 mb-3">
+                How would you like to support panda conservation? <span class="text-red-500">*</span>
+            </p>
+            <div class="flex flex-col gap-2" id="support-type-cards">
+                <div class="plain-choice">
+                    <label for="support-donate">
+                        <input type="radio" id="support-donate" name="support_type" value="donate" required>
+                        Make a Donation
+                    </label>
+                </div>
+                <div class="plain-choice">
+                    <label for="support-adopt">
+                        <input type="radio" id="support-adopt" name="support_type" value="adopt">
+                        Virtual Adoption
+                    </label>
+                </div>
+                <div class="plain-choice">
+                    <label for="support-awareness">
+                        <input type="radio" id="support-awareness" name="support_type" value="awareness">
+                        Spread Awareness
+                    </label>
+                </div>
+                <div class="plain-choice">
+                    <label for="support-research">
+                        <input type="radio" id="support-research" name="support_type" value="research">
+                        Fund Research
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 4a: Donation amount ─────────────────────────── -->
+        <div class="reveal-field mb-5" id="field-donate-amount">
+            <div class="bg-green-50 border border-green-200 rounded-md p-4">
+                <p class="text-sm font-semibold text-green-800 mb-3">Choose a donation amount</p>
+                <div class="flex flex-col gap-2 mb-3" id="amount-cards">
+                    <div class="plain-choice">
+                        <label for="amt-10">
+                            <input type="radio" id="amt-10" name="donation_amount" value="10">
+                            $10
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="amt-25">
+                            <input type="radio" id="amt-25" name="donation_amount" value="25">
+                            $25
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="amt-50">
+                            <input type="radio" id="amt-50" name="donation_amount" value="50">
+                            $50
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="amt-custom">
+                            <input type="radio" id="amt-custom" name="donation_amount" value="custom">
+                            Custom
+                        </label>
+                    </div>
+                </div>
+                <!-- Custom amount revealed when "Custom" is selected -->
+                <div class="reveal-field mt-2" id="field-custom-amount">
+                    <label for="custom-amount" class="block text-sm font-medium text-gray-700 mb-1">Enter your amount (USD)</label>
+                    <input type="number" id="custom-amount" name="custom_amount" min="1"
+                           class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                           placeholder="e.g. 75">
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 4b: Virtual Adoption — choose a panda ────────── -->
+        <div class="reveal-field mb-5" id="field-adopt-panda">
+            <div class="bg-amber-50 border border-amber-200 rounded-md p-4">
+                <p class="text-sm font-semibold text-amber-800 mb-3">Choose a panda to virtually adopt</p>
+                <div class="flex flex-col gap-2">
+                    <div class="plain-choice">
+                        <label for="panda-bao">
+                            <input type="radio" id="panda-bao" name="panda" value="bao_bao">
+                            Bao Bao — 11 yrs, female
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="panda-bei">
+                            <input type="radio" id="panda-bei" name="panda" value="bei_bei">
+                            Bei Bei — 9 yrs, male
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="panda-xiao">
+                            <input type="radio" id="panda-xiao" name="panda" value="xiao_qi_ji">
+                            Xiao Qi Ji — 5 yrs, male
+                        </label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="panda-mei">
+                            <input type="radio" id="panda-mei" name="panda" value="mei_xiang">
+                            Mei Xiang — 26 yrs, female
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 4c: Awareness — platforms ────────────────────── -->
+        <div class="reveal-field mb-5" id="field-awareness-platforms">
+            <div class="bg-blue-50 border border-blue-200 rounded-md p-4">
+                <p class="text-sm font-semibold text-blue-800 mb-3">Which platforms will you share on?</p>
+                <div class="flex flex-col gap-2">
+                    <div class="plain-choice">
+                        <label for="platform-instagram"><input type="checkbox" id="platform-instagram" name="platform" value="instagram"> Instagram</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="platform-twitter"><input type="checkbox" id="platform-twitter" name="platform" value="twitter"> X / Twitter</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="platform-tiktok"><input type="checkbox" id="platform-tiktok" name="platform" value="tiktok"> TikTok</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="platform-facebook"><input type="checkbox" id="platform-facebook" name="platform" value="facebook"> Facebook</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="platform-youtube"><input type="checkbox" id="platform-youtube" name="platform" value="youtube"> YouTube</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="platform-linkedin"><input type="checkbox" id="platform-linkedin" name="platform" value="linkedin"> LinkedIn</label>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <label for="social-handle" class="block text-sm font-medium text-gray-700 mb-1">Your primary handle or profile link</label>
+                    <input type="text" id="social-handle" name="social_handle"
+                           class="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                           placeholder="@pandafan or https://...">
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 4d: Research — focus area ────────────────────── -->
+        <div class="reveal-field mb-5" id="field-research-area">
+            <div class="bg-purple-50 border border-purple-200 rounded-md p-4">
+                <p class="text-sm font-semibold text-purple-800 mb-3">Which research area do you want to fund?</p>
+                <div class="flex flex-col gap-2">
+                    <div class="plain-choice">
+                        <label for="res-habitat"><input type="radio" id="res-habitat" name="research_area" value="habitat"> Habitat Restoration</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="res-breeding"><input type="radio" id="res-breeding" name="research_area" value="breeding"> Breeding Programs</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="res-health"><input type="radio" id="res-health" name="research_area" value="health"> Veterinary Health</label>
+                    </div>
+                    <div class="plain-choice">
+                        <label for="res-climate"><input type="radio" id="res-climate" name="research_area" value="climate"> Climate Impact Studies</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 5: Frequency (after support detail is filled) ── -->
+        <div class="reveal-field mb-5" id="field-frequency">
+            <p class="block text-sm font-medium text-gray-700 mb-3">
+                How often would you like to contribute? <span class="text-red-500">*</span>
+            </p>
+            <div class="flex flex-col gap-2" id="frequency-cards">
+                <div class="plain-choice">
+                    <label for="freq-once"><input type="radio" id="freq-once" name="frequency" value="once" required> One-time</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="freq-monthly"><input type="radio" id="freq-monthly" name="frequency" value="monthly"> Monthly</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="freq-quarterly"><input type="radio" id="freq-quarterly" name="frequency" value="quarterly"> Quarterly</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="freq-annually"><input type="radio" id="freq-annually" name="frequency" value="annually"> Annually</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 5a: Recurring billing note ───────────────────── -->
+        <div class="reveal-field mb-5" id="field-recurring-note">
+            <div class="bg-yellow-50 border border-yellow-300 rounded-md p-3 text-sm text-yellow-800">
+                <strong>Recurring pledge selected.</strong> We'll send a reminder before each charge and
+                you can cancel at any time. Please verify your billing address below.
+            </div>
+            <div class="mt-3">
+                <label for="billing-address" class="block text-sm font-medium text-gray-700">Billing Address</label>
+                <input type="text" id="billing-address" name="billing_address" autocomplete="street-address"
+                       class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                       placeholder="123 Main St, City, State, ZIP">
+            </div>
+        </div>
+
+        <!-- ── STEP 6: Personal motivation (after frequency) ─────── -->
+        <div class="reveal-field mb-5" id="field-motivation">
+            <label for="motivation" class="block text-sm font-medium text-gray-700">
+                What inspires you to support panda conservation?
+            </label>
+            <textarea id="motivation" name="motivation" rows="3"
+                      class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                      placeholder="Share your story or reason…"></textarea>
+        </div>
+
+        <!-- ── STEP 7: How did you hear about us? (radios) ────────── -->
+        <div class="reveal-field mb-5" id="field-referral">
+            <p class="block text-sm font-medium text-gray-700 mb-3">How did you hear about us?</p>
+            <div class="flex flex-col gap-2" id="referral-cards">
+                <div class="plain-choice">
+                    <label for="ref-friend"><input type="radio" id="ref-friend" name="referral" value="friend"> Friend or Family</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="ref-social"><input type="radio" id="ref-social" name="referral" value="social"> Social Media</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="ref-search"><input type="radio" id="ref-search" name="referral" value="search"> Search Engine</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="ref-event"><input type="radio" id="ref-event" name="referral" value="event"> Event / Conference</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="ref-news"><input type="radio" id="ref-news" name="referral" value="news"> News Article</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 7a: Friend's name (if friend/family) ─────────── -->
+        <div class="reveal-field mb-5" id="field-friend-name">
+            <label for="friend-name" class="block text-sm font-medium text-gray-700">
+                Friend's Name <span class="text-gray-400 font-normal">(optional, for referral credit)</span>
+            </label>
+            <input type="text" id="friend-name" name="friend_name"
+                   class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                   placeholder="e.g. Alex Smith">
+        </div>
+
+        <!-- ── STEP 7b: Social media handle (if social) ──────────── -->
+        <div class="reveal-field mb-5" id="field-ref-handle">
+            <label for="ref-handle" class="block text-sm font-medium text-gray-700">Which account or post led you here?</label>
+            <input type="text" id="ref-handle" name="ref_handle"
+                   class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                   placeholder="@username or post link">
+        </div>
+
+        <!-- ── STEP 8: Newsletter opt-in ─────────────────────────── -->
+        <div class="reveal-field mb-5" id="field-newsletter">
+            <div class="plain-choice">
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    Sign me up for the <strong>Panda Dispatch</strong> newsletter — monthly updates on
+                    conservation wins, new pandas born, and how your pledge is making a difference.
+                </label>
+            </div>
+        </div>
+
+        <!-- ── STEP 8a: Newsletter topics (if subscribed) ────────── -->
+        <div class="reveal-field mb-6" id="field-newsletter-topics">
+            <p class="block text-sm font-medium text-gray-700 mb-2">Which topics interest you most?</p>
+            <div class="flex flex-col gap-2">
+                <div class="plain-choice">
+                    <label for="topic-research"><input type="checkbox" id="topic-research" name="topic" value="research"> Research Updates</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="topic-cubs"><input type="checkbox" id="topic-cubs" name="topic" value="cubs"> New Cub Announcements</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="topic-events"><input type="checkbox" id="topic-events" name="topic" value="events"> Upcoming Events</label>
+                </div>
+                <div class="plain-choice">
+                    <label for="topic-impact"><input type="checkbox" id="topic-impact" name="topic" value="impact"> Impact Reports</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── STEP 9: Additional Comments ───────────────────────── -->
+        <div class="reveal-field mb-5" id="field-additional-comments">
+            <label for="additional-comments" class="block text-sm font-medium text-gray-700">Additional Comments <span class="text-red-500">*</span></label>
+            <textarea id="additional-comments" name="additional_comments" rows="3" required
+                      class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
+                      placeholder="Any final thoughts..." ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="w-full bg-green-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-green-700 transition duration-150"
+                id="submit-btn">
+            Submit Pledge
+        </button>
+    </form>
+
+    <!-- Success message -->
+    <div id="success-msg" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-md text-green-800 text-sm font-medium">
+        ✓ Thank you for your pledge! You're helping protect giant pandas. We'll be in touch soon.
+    </div>
+
+</div>
+
+<script>
+/* ────────────────────────────────────────────────────────────────
+   Reveal-timing instrumentation (same pattern as dynamic-form)
+──────────────────────────────────────────────────────────────── */
+const revealTimes   = {};
+const reactionLog   = [];
+const reactedFields = new Set();
+const SESSION_ID    = Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+
+function attachReactionListeners(fieldId) {
+    const container = document.getElementById(fieldId);
+    if (!container) return;
+
+    const targets = container.querySelectorAll('input, select, textarea, button');
+    const EVENTS  = ['focus', 'mousedown', 'touchstart', 'change', 'input'];
+
+    function onFirstInteraction(e) {
+        if (reactedFields.has(fieldId)) return;
+        reactedFields.add(fieldId);
+
+        const now        = Date.now();
+        const revealedAt = revealTimes[fieldId];
+        const entry = {
+            sessionId      : SESSION_ID,
+            fieldId        : fieldId,
+            revealedAt     : revealedAt,
+            firstInteractAt: now,
+            reactionMs     : now - revealedAt,
+            eventType      : e.type,
+            triggerElement : e.target.tagName + (e.target.id ? '#' + e.target.id : ''),
+            isTrusted      : e.isTrusted
+        };
+        reactionLog.push(entry);
+        console.log('[reaction]', entry.fieldId, entry.reactionMs + 'ms', '(' + entry.eventType + ')');
+
+        targets.forEach(t =>
+            EVENTS.forEach(ev => t.removeEventListener(ev, onFirstInteraction))
+        );
+    }
+
+    targets.forEach(t =>
+        EVENTS.forEach(ev => t.addEventListener(ev, onFirstInteraction, { passive: true }))
+    );
+}
+
+function show(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (!el.classList.contains('visible')) {
+        revealTimes[id] = Date.now();
+        el.classList.add('visible');
+        attachReactionListeners(id);
+        updateProgress();
+    }
+}
+function hide(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('visible');
+    delete revealTimes[id];
+    reactedFields.delete(id);
+    updateProgress();
+}
+
+function updateProgress() {
+    const total   = document.querySelectorAll('.reveal-field').length;
+    const visible = document.querySelectorAll('.reveal-field.visible').length;
+    const dots    = document.querySelectorAll('.step-dot');
+    dots.forEach((dot, i) => {
+        const threshold = Math.round((i + 1) * total / dots.length);
+        dot.classList.toggle('active', visible >= threshold);
+    });
+}
+
+/* ── STEP 2: email after name ──────────────────────────────────── */
+document.getElementById('full-name').addEventListener('input', function () {
+    if (this.value.trim().length >= 2) show('field-email');
+});
+
+/* ── STEP 3: phone after email ─────────────────────────────────── */
+document.getElementById('email').addEventListener('input', function () {
+    if (this.value.trim().length >= 4) show('field-phone');
+});
+
+/* ── STEP 4: support type after phone field is shown ───────────── */
+document.getElementById('phone').addEventListener('input', function () {
+    show('field-support-type');
+});
+// Also reveal immediately when the phone field is focused (even if blank)
+document.getElementById('phone').addEventListener('focus', function () {
+    show('field-support-type');
+});
+
+/* ── STEP 4a/b/c/d: support-type radio logic ──────────────────── */
+document.querySelectorAll('input[name="support_type"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+        ['field-donate-amount', 'field-adopt-panda', 'field-awareness-platforms', 'field-research-area'].forEach(hide);
+
+        if (this.value === 'donate')    show('field-donate-amount');
+        if (this.value === 'adopt')     show('field-adopt-panda');
+        if (this.value === 'awareness') show('field-awareness-platforms');
+        if (this.value === 'research')  show('field-research-area');
+    });
+});
+
+/* ── Custom donation amount ─────────────────────────────────────── */
+document.querySelectorAll('input[name="donation_amount"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+        if (this.value === 'custom') show('field-custom-amount');
+        else                         hide('field-custom-amount');
+    });
+});
+
+/* ── STEP 5: frequency — shown when support detail is interacted ── */
+function maybeShowFrequency() {
+    show('field-frequency');
+}
+
+['field-donate-amount', 'field-adopt-panda', 'field-awareness-platforms', 'field-research-area'].forEach(fieldId => {
+    const container = document.getElementById(fieldId);
+    if (!container) return;
+    container.addEventListener('change', maybeShowFrequency, { once: false });
+    container.querySelectorAll('input, textarea').forEach(el => {
+        el.addEventListener('input', maybeShowFrequency, { once: true });
+    });
+});
+
+/* ── STEP 5a: recurring billing note ──────────────────────────── */
+document.querySelectorAll('input[name="frequency"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+        if (this.value !== 'once') show('field-recurring-note');
+        else                        hide('field-recurring-note');
+        show('field-motivation');
+        show('field-referral'); 
+        show('field-additional-comments');
+    });
+});
+
+/* ── STEP 6→7: motivation textarea (optional now, no longer blocks 7) */
+document.getElementById('motivation').addEventListener('input', function () {
+    // referral and additional comments are now shown immediately with frequency
+});
+
+/* ── STEP 7a/b: referral sub-fields ────────────────────────────── */
+document.querySelectorAll('input[name="referral"]').forEach(radio => {
+    radio.addEventListener('change', function () {
+        hide('field-friend-name');
+        hide('field-ref-handle');
+
+        if (this.value === 'friend') show('field-friend-name');
+        if (this.value === 'social') show('field-ref-handle');
+
+        show('field-newsletter');
+        show('field-additional-comments');
+    });
+});
+
+/* ── STEP 8a: newsletter topics ─────────────────────────────────── */
+document.getElementById('newsletter').addEventListener('change', function () {
+    if (this.checked) show('field-newsletter-topics');
+    else              hide('field-newsletter-topics');
+});
+
+/* ── Form submission ─────────────────────────────────────────────── */
+let logSent = false;
+
+function buildPayload() {
+    const delays = reactionLog.map(r => r.reactionMs);
+    const summary = delays.length ? {
+        count   : delays.length,
+        minMs   : Math.min(...delays),
+        maxMs   : Math.max(...delays),
+        meanMs  : Math.round(delays.reduce((a, b) => a + b, 0) / delays.length),
+        medianMs: delays.slice().sort((a, b) => a - b)[Math.floor(delays.length / 2)]
+    } : null;
+
+    return {
+        sessionId  : SESSION_ID,
+        submittedAt: Date.now(),
+        userAgent  : navigator.userAgent,
+        summary,
+        reactions  : reactionLog
+    };
+}
+
+function sendLog(useBeacon) {
+    if (logSent || reactionLog.length === 0) return;
+    logSent = true;
+
+    const payload = buildPayload();
+    const body = JSON.stringify(payload);
+    console.log('[reaction log]', payload);
+
+    if (useBeacon && navigator.sendBeacon) {
+        navigator.sendBeacon('/log-interaction', new Blob([body], { type: 'application/json' }));
+    } else {
+        fetch('/log-interaction', {
+            method : 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body
+        }).catch(err => console.warn('log-interaction failed:', err));
+    }
+}
+
+document.getElementById('pledge-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendLog(false);
+    this.style.display = 'none';
+    document.getElementById('success-msg').classList.remove('hidden');
+    document.getElementById('progress-dots').style.display = 'none';
+});
+
+window.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') sendLog(true);
+});
+window.addEventListener('pagehide', () => sendLog(true));
+
+
+</script>
+
+</body>
+</html>

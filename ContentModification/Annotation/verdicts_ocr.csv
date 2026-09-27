@@ -1,0 +1,141 @@
+Sheet,Agent,Run,Moiz,Nafis
+OCR Additional Information,Amazon Nova,Run 1,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 10,Failed,Failed
+OCR Additional Information,Amazon Nova,Run 2,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 3,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 4,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 5,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 6,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 7,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 8,Worked,Worked
+OCR Additional Information,Amazon Nova,Run 9,Failed,Failed
+OCR Additional Information,Brave Leo,Run 1,Failed,Failed
+OCR Additional Information,Brave Leo,Run 10,Failed,Failed
+OCR Additional Information,Brave Leo,Run 2,Failed,Failed
+OCR Additional Information,Brave Leo,Run 3,Failed,Failed
+OCR Additional Information,Brave Leo,Run 4,Failed,Failed
+OCR Additional Information,Brave Leo,Run 5,Failed,Failed
+OCR Additional Information,Brave Leo,Run 6,Failed,Failed
+OCR Additional Information,Brave Leo,Run 7,Failed,Failed
+OCR Additional Information,Brave Leo,Run 8,Failed,Failed
+OCR Additional Information,Brave Leo,Run 9,Failed,Failed
+OCR Additional Information,ChatGPT,Run 1,Failed,Failed
+OCR Additional Information,ChatGPT,Run 10,Failed,Failed
+OCR Additional Information,ChatGPT,Run 2,Failed,Failed
+OCR Additional Information,ChatGPT,Run 3,Failed,Failed
+OCR Additional Information,ChatGPT,Run 4,Failed,Failed
+OCR Additional Information,ChatGPT,Run 5,Failed,Failed
+OCR Additional Information,ChatGPT,Run 6,Failed,Failed
+OCR Additional Information,ChatGPT,Run 7,Failed,Failed
+OCR Additional Information,ChatGPT,Run 8,Failed,Failed
+OCR Additional Information,ChatGPT,Run 9,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 1,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 10,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 2,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 3,Partial,Partial
+OCR Additional Information,ChatGPT Atlas,Run 4,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 5,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 6,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 7,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 8,Failed,Failed
+OCR Additional Information,ChatGPT Atlas,Run 9,Failed,Failed
+OCR Additional Information,Claude,Run 1,Failed,Failed
+OCR Additional Information,Claude,Run 10,Failed,Failed
+OCR Additional Information,Claude,Run 2,Failed,Failed
+OCR Additional Information,Claude,Run 3,Failed,Failed
+OCR Additional Information,Claude,Run 4,Failed,Failed
+OCR Additional Information,Claude,Run 5,Failed,Failed
+OCR Additional Information,Claude,Run 6,Failed,Failed
+OCR Additional Information,Claude,Run 7,Failed,Failed
+OCR Additional Information,Claude,Run 8,Failed,Failed
+OCR Additional Information,Claude,Run 9,Failed,Failed
+OCR Additional Information,Claude for Chrome,Run 1,Worked,Worked
+OCR Additional Information,Claude for Chrome,Run 10,Failed,Failed
+OCR Additional Information,Claude for Chrome,Run 2,Worked,Worked
+OCR Additional Information,Claude for Chrome,Run 3,Partial,Partial
+OCR Additional Information,Claude for Chrome,Run 4,Partial,Partial
+OCR Additional Information,Claude for Chrome,Run 5,Partial,Partial
+OCR Additional Information,Claude for Chrome,Run 6,Partial,Partial
+OCR Additional Information,Claude for Chrome,Run 7,Partial,Partial
+OCR Additional Information,Claude for Chrome,Run 8,Failed,Failed
+OCR Additional Information,Claude for Chrome,Run 9,Failed,Failed
+OCR Additional Information,Comet,Run 1,Worked,Failed
+OCR Additional Information,Comet,Run 10,Failed,Failed
+OCR Additional Information,Comet,Run 2,Failed,Failed
+OCR Additional Information,Comet,Run 3,Failed,Failed
+OCR Additional Information,Comet,Run 4,Failed,Failed
+OCR Additional Information,Comet,Run 5,Failed,Failed
+OCR Additional Information,Comet,Run 6,Failed,Failed
+OCR Additional Information,Comet,Run 7,Failed,Failed
+OCR Additional Information,Comet,Run 8,Failed,Failed
+OCR Additional Information,Comet,Run 9,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 1,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 10,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 2,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 3,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 4,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 5,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 6,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 7,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 8,Failed,Failed
+OCR Additional Information,Crawl4AI,Run 9,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 1,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 10,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 2,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 3,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 4,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 5,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 6,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 7,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 8,Failed,Failed
+OCR Additional Information,DevTools MCP,Run 9,Failed,Failed
+OCR Additional Information,Director.ai,Run 1,Worked,Worked
+OCR Additional Information,Director.ai,Run 10,Worked,Worked
+OCR Additional Information,Director.ai,Run 2,Worked,Worked
+OCR Additional Information,Director.ai,Run 3,Worked,Worked
+OCR Additional Information,Director.ai,Run 4,Worked,Worked
+OCR Additional Information,Director.ai,Run 5,Worked,Worked
+OCR Additional Information,Director.ai,Run 6,Worked,Worked
+OCR Additional Information,Director.ai,Run 7,Worked,Worked
+OCR Additional Information,Director.ai,Run 8,Worked,Worked
+OCR Additional Information,Director.ai,Run 9,Worked,Worked
+OCR Additional Information,Edge Copilot,Run 1,Failed,Failed
+OCR Additional Information,Edge Copilot,Run 10,-,Failed
+OCR Additional Information,Edge Copilot,Run 2,-,Failed
+OCR Additional Information,Edge Copilot,Run 3,-,Failed
+OCR Additional Information,Edge Copilot,Run 4,-,Failed
+OCR Additional Information,Edge Copilot,Run 5,-,Failed
+OCR Additional Information,Edge Copilot,Run 6,-,Failed
+OCR Additional Information,Edge Copilot,Run 7,-,Failed
+OCR Additional Information,Edge Copilot,Run 8,-,Failed
+OCR Additional Information,Edge Copilot,Run 9,-,Failed
+OCR Additional Information,Gemini,Run 1,-,-
+OCR Additional Information,Gemini,Run 10,-,-
+OCR Additional Information,Gemini,Run 2,-,-
+OCR Additional Information,Gemini,Run 3,-,-
+OCR Additional Information,Gemini,Run 4,-,-
+OCR Additional Information,Gemini,Run 5,-,-
+OCR Additional Information,Gemini,Run 6,-,-
+OCR Additional Information,Gemini,Run 7,-,-
+OCR Additional Information,Gemini,Run 8,-,-
+OCR Additional Information,Gemini,Run 9,-,-
+OCR Additional Information,Gemini in Chrome,Run 1,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 10,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 2,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 3,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 4,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 5,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 6,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 7,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 8,Worked,Worked
+OCR Additional Information,Gemini in Chrome,Run 9,Worked,Worked
+OCR Additional Information,Manus,Run 1,Failed,Failed
+OCR Additional Information,Manus,Run 10,Failed,Failed
+OCR Additional Information,Manus,Run 2,Failed,Failed
+OCR Additional Information,Manus,Run 3,Failed,Failed
+OCR Additional Information,Manus,Run 4,Failed,Failed
+OCR Additional Information,Manus,Run 5,Failed,Failed
+OCR Additional Information,Manus,Run 6,Failed,Failed
+OCR Additional Information,Manus,Run 7,Failed,Failed
+OCR Additional Information,Manus,Run 8,Failed,Failed
+OCR Additional Information,Manus,Run 9,Failed,Failed

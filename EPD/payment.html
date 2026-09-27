@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Checkout | example.com</title>
+  <style>
+    :root {
+      --primary-color: #1a1a1a;
+      --accent-color: #bfa173;
+      --bg-color: #fcfcfc;
+      --text-main: #2c2c2c;
+      --text-muted: #757575;
+      --border-color: #ebebeb;
+      --success-green: #2e8b57;
+      --error: #c0392b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .brand-logo { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; color: var(--primary-color); text-decoration: none; }
+    .nav-secure { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--text-muted); }
+    .nav-secure svg { color: var(--success-green); }
+
+    .steps-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border-color);
+      padding: 14px 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .step { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 500; color: #bbb; padding: 0 24px; position: relative; }
+    .step::after { content: '›'; position: absolute; right: 0; color: #ddd; font-size: 1rem; }
+    .step:last-child::after { display: none; }
+    .step.done { color: var(--success-green); }
+    .step.active { color: var(--primary-color); font-weight: 700; }
+    .step-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; background: #eee; color: #999; flex-shrink: 0; }
+    .step.done .step-num { background: var(--success-green); color: white; }
+    .step.active .step-num { background: var(--primary-color); color: white; }
+
+    .page-body { flex: 1; padding: 40px 20px 60px; }
+    .checkout-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* ── FORM SIDE ── */
+    .form-panel { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
+    .section-heading { font-size: 1rem; font-weight: 600; color: var(--primary-color); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 8px; }
+    .section-heading svg { color: var(--text-muted); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-row.full { grid-template-columns: 1fr; }
+    .form-row.thirds { grid-template-columns: 2fr 1fr 1fr; }
+
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .field input, .field select {
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      font-family: inherit;
+    }
+    .field input:focus, .field select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(26,26,26,0.06);
+    }
+    .field input::placeholder { color: #c0c0c0; }
+
+    /* card number row with icon */
+    .card-field { position: relative; }
+    .card-field input { padding-right: 80px; letter-spacing: 0.08em; }
+    .card-brands {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .card-brands span {
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      background: #f9f9f9;
+      letter-spacing: 0;
+    }
+
+    .section-divider { margin: 28px 0; border: none; border-top: 1px solid var(--border-color); }
+
+    .btn-complete {
+      width: 100%;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 17px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+      letter-spacing: 0.3px;
+    }
+    .btn-complete:hover { background-color: #333; }
+
+    .secure-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #bbb;
+      margin-top: 14px;
+    }
+
+    /* ── ORDER SUMMARY SIDE ── */
+    .summary-panel { position: sticky; top: 24px; }
+    .summary-card { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
+    .summary-header { background: #f9f9f9; border-bottom: 1px solid var(--border-color); padding: 18px 24px; font-size: 0.88rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .summary-body { padding: 20px 24px; }
+    .summary-product { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+    .product-thumb {
+      width: 72px; height: 72px;
+      background: #f5f5f5;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; color: #ccc;
+      overflow: hidden;
+    }
+    .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .product-meta { flex: 1; }
+    .product-meta .name { font-size: 0.92rem; font-weight: 600; margin-bottom: 4px; }
+    .product-meta .variant { font-size: 0.8rem; color: var(--text-muted); }
+    .product-meta .qty { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+    .product-price { font-size: 0.95rem; font-weight: 600; flex-shrink: 0; }
+    .summary-line { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--text-muted); margin-bottom: 10px; }
+    .summary-line.total { font-size: 1rem; font-weight: 700; color: var(--text-main); border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: 6px; }
+    .summary-line .free { color: var(--success-green); font-weight: 500; }
+    .promo-row { display: flex; gap: 8px; margin: 18px 0; }
+    .promo-input { flex: 1; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 0.88rem; font-family: inherit; }
+    .promo-input:focus { outline: none; border-color: var(--primary-color); }
+    .promo-btn { padding: 10px 16px; background: #f0f0f0; border: 1px solid var(--border-color); border-radius: 5px; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: var(--text-main); }
+    .promo-btn:hover { background: #e5e5e5; }
+    .trust-list { list-style: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 10px; }
+    .trust-list li { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-muted); }
+
+    footer { background: #111; color: #666; text-align: center; padding: 20px; font-size: 0.78rem; }
+    footer a { color: #666; text-decoration: none; margin: 0 10px; }
+    footer a:hover { color: #999; }
+
+    @media (max-width: 720px) {
+      .checkout-grid { grid-template-columns: 1fr; }
+      .summary-panel { position: static; }
+      .form-row.thirds { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="buy.html" class="brand-logo">example.com</a>
+  <div class="nav-secure">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    256-bit SSL Encrypted
+  </div>
+</nav>
+
+<div class="steps-bar">
+  <div class="step done"><div class="step-num">✓</div>Cart</div>
+  <div class="step done"><div class="step-num">✓</div>Securing</div>
+  <div class="step active"><div class="step-num">3</div>Payment</div>
+  <div class="step"><div class="step-num">4</div>Confirmation</div>
+</div>
+
+<div class="page-body">
+  <div class="checkout-grid">
+
+    <!-- FORM -->
+    <div class="form-panel">
+
+      <!-- Contact -->
+      <div class="section-heading">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Contact Information
+      </div>
+      <div class="form-row">
+        <div class="field"><label>First Name</label><input type="text" placeholder="Jane" autocomplete="given-name" /></div>
+        <div class="field"><label>Last Name</label><input type="text" placeholder="Smith" autocomplete="family-name" /></div>
+      </div>
+      <div class="form-row full">
+        <div class="field"><label>Email Address</label><input type="email" placeholder="jane@example.com" autocomplete="email" /></div>
+      </div>
+      <div class="form-row full">
+        <div class="field"><label>Phone (optional)</label><input type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" /></div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- Shipping -->
+      <div class="section-heading">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Shipping Address
+      </div>
+      <div class="form-row full">
+        <div class="field"><label>Street Address</label><input type="text" placeholder="1245 W Fulton Market" autocomplete="street-address" /></div>
+      </div>
+      <div class="form-row full">
+        <div class="field"><label>Apt, Suite, Unit (optional)</label><input type="text" placeholder="Apt 4B" autocomplete="address-line2" /></div>
+      </div>
+      <div class="form-row thirds">
+        <div class="field"><label>City</label><input type="text" placeholder="Chicago" autocomplete="address-level2" /></div>
+        <div class="field">
+          <label>State</label>
+          <select autocomplete="address-level1">
+            <option value="">—</option>
+            <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+            <option selected>IL</option><option>IN</option><option>IA</option>
+            <option>CA</option><option>CO</option><option>CT</option>
+            <option>FL</option><option>GA</option><option>HI</option>
+            <option>NY</option><option>NC</option><option>OH</option>
+            <option>TX</option><option>WA</option>
+          </select>
+        </div>
+        <div class="field"><label>ZIP Code</label><input type="text" placeholder="60607" maxlength="5" autocomplete="postal-code" /></div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- Payment -->
+      <div class="section-heading">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Payment Details
+      </div>
+      <div class="form-row full">
+        <div class="field">
+          <label>Card Number</label>
+          <div class="card-field">
+            <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" id="card-number" />
+            <div class="card-brands">
+              <span>VISA</span>
+              <span>MC</span>
+              <span>AMEX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div class="field"><label>Name on Card</label><input type="text" placeholder="Jane Smith" autocomplete="cc-name" /></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Expiry Date</label><input type="text" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" id="cc-exp" /></div>
+        <div class="field"><label>Security Code (CVV)</label><input type="text" placeholder="•••" maxlength="4" autocomplete="cc-csc" /></div>
+      </div>
+
+      <button class="btn-complete" onclick="placeOrder()">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Complete Order — $32.00
+      </button>
+
+      <div class="secure-note">
+        <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Your payment information is encrypted and never stored
+      </div>
+
+    </div><!-- /form-panel -->
+
+    <!-- ORDER SUMMARY -->
+    <div class="summary-panel">
+      <div class="summary-card">
+        <div class="summary-header">Order Summary</div>
+        <div class="summary-body">
+
+          <div class="summary-product">
+            <div class="product-thumb">
+              <img src="shampoo.jpeg" alt="Tara Restorative Shampoo" onerror="this.parentElement.textContent='🧴'" />
+            </div>
+            <div class="product-meta">
+              <div class="name">Tara Restorative Shampoo</div>
+              <div class="variant">250ml · Sulfate-Free</div>
+              <div class="qty">Qty: 1</div>
+            </div>
+            <div class="product-price">$32.00</div>
+          </div>
+
+          <div class="promo-row">
+            <input class="promo-input" type="text" placeholder="Promo code" />
+            <button class="promo-btn">Apply</button>
+          </div>
+
+          <div class="summary-line"><span>Subtotal</span><span>$32.00</span></div>
+          <div class="summary-line"><span>Shipping</span><span class="free">Free</span></div>
+          <div class="summary-line"><span>Tax (est.)</span><span>$2.88</span></div>
+          <div class="summary-line total"><span>Total</span><span>$34.88</span></div>
+
+          <ul class="trust-list">
+            <li>🌿 100% Vegan & Cruelty-Free</li>
+            <li>📦 Free shipping on this order</li>
+            <li>↩️ 30-day hassle-free returns</li>
+            <li>🔒 Payment secured by 256-bit SSL</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Tara Beauty, LLC.</span>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Terms of Service</a>
+  <a href="#">Security</a>
+</footer>
+
+<script>
+  // Format card number with spaces
+  document.getElementById('card-number').addEventListener('input', function () {
+    let v = this.value.replace(/\D/g, '').substring(0, 16);
+    this.value = v.replace(/(.{4})/g, '$1 ').trim();
+  });
+
+  // Format expiry MM / YY
+  document.getElementById('cc-exp').addEventListener('input', function () {
+    let v = this.value.replace(/\D/g, '').substring(0, 4);
+    if (v.length >= 3) v = v.substring(0, 2) + ' / ' + v.substring(2);
+    this.value = v;
+  });
+
+  function placeOrder() {
+    window.location.href = 'confirmation.html';
+  }
+</script>
+
+</body>
+</html>

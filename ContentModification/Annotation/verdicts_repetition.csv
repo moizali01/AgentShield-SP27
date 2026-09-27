@@ -1,0 +1,561 @@
+Sheet,Agent,Run,Moiz,Nafis
+Defensive,Comet,Run 1,Worked,Worked
+Defensive,Comet,Run 2,Worked,Worked
+Defensive,Comet,Run 3,Worked,Worked
+Defensive,Comet,Run 4,Partial,Partial
+Defensive,Comet,Run 5,Partial,Partial
+Defensive,Comet,Run 6,Partial,Partial
+Defensive,Comet,Run 7,Partial,Partial
+Defensive,Comet,Run 8,Partial,Failed
+Defensive,Comet,Run 9,Partial,Failed
+Defensive,Comet,Run 10,Partial,Failed
+Defensive,Amazon Nova,Run 1,Failed,Failed
+Defensive,Amazon Nova,Run 2,Failed,Failed
+Defensive,Amazon Nova,Run 3,Failed,Failed
+Defensive,Amazon Nova,Run 4,Failed,Failed
+Defensive,Amazon Nova,Run 5,Failed,Failed
+Defensive,Amazon Nova,Run 6,Failed,Failed
+Defensive,Amazon Nova,Run 7,Failed,Failed
+Defensive,Amazon Nova,Run 8,Failed,Failed
+Defensive,Amazon Nova,Run 9,Failed,Failed
+Defensive,Amazon Nova,Run 10,Failed,Failed
+Defensive,Manus,Run 1,Failed,Failed
+Defensive,Manus,Run 2,Failed,Failed
+Defensive,Manus,Run 3,Failed,Failed
+Defensive,Manus,Run 4,Failed,Failed
+Defensive,Manus,Run 5,Failed,Failed
+Defensive,Manus,Run 6,Failed,Failed
+Defensive,Manus,Run 7,Failed,Failed
+Defensive,Manus,Run 8,Failed,Failed
+Defensive,Manus,Run 9,Failed,Failed
+Defensive,Manus,Run 10,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 1,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 2,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 3,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 4,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 5,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 6,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 7,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 8,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 9,Failed,Failed
+Defensive,Devtools MCP(Claude),Run 10,Failed,Failed
+Defensive,Director.ai,Run 1,Partial,Partial
+Defensive,Director.ai,Run 2,Partial,Partial
+Defensive,Director.ai,Run 3,Partial,Partial
+Defensive,Director.ai,Run 4,Partial,Partial
+Defensive,Director.ai,Run 5,Partial,Partial
+Defensive,Director.ai,Run 6,Partial,Partial
+Defensive,Director.ai,Run 7,Partial,Partial
+Defensive,Director.ai,Run 8,Partial,Partial
+Defensive,Director.ai,Run 9,Partial,Partial
+Defensive,Director.ai,Run 10,Partial,Partial
+Defensive,ChatGPT Atlas,Run 1,Failed,Failed
+Defensive,ChatGPT Atlas,Run 2,Failed,Failed
+Defensive,ChatGPT Atlas,Run 3,Failed,Failed
+Defensive,ChatGPT Atlas,Run 4,Failed,Failed
+Defensive,ChatGPT Atlas,Run 5,Failed,Failed
+Defensive,ChatGPT Atlas,Run 6,Failed,Failed
+Defensive,ChatGPT Atlas,Run 7,Failed,Failed
+Defensive,ChatGPT Atlas,Run 8,Failed,Failed
+Defensive,ChatGPT Atlas,Run 9,Failed,Failed
+Defensive,ChatGPT Atlas,Run 10,Failed,Failed
+Defensive,Claude for Chrome,Run 1,Failed,Failed
+Defensive,Claude for Chrome,Run 2,Failed,Failed
+Defensive,Claude for Chrome,Run 3,Failed,Failed
+Defensive,Claude for Chrome,Run 4,Failed,Failed
+Defensive,Claude for Chrome,Run 5,Failed,Failed
+Defensive,Claude for Chrome,Run 6,Failed,Failed
+Defensive,Claude for Chrome,Run 7,Failed,Failed
+Defensive,Claude for Chrome,Run 8,Failed,Failed
+Defensive,Claude for Chrome,Run 9,Failed,Failed
+Defensive,Claude for Chrome,Run 10,Failed,Failed
+Defensive,Gemini in Chrome,Run 1,Failed,Failed
+Defensive,Gemini in Chrome,Run 2,Failed,Failed
+Defensive,Gemini in Chrome,Run 3,Failed,Failed
+Defensive,Gemini in Chrome,Run 4,Failed,Failed
+Defensive,Gemini in Chrome,Run 5,Failed,Failed
+Defensive,Gemini in Chrome,Run 6,Failed,Failed
+Defensive,Gemini in Chrome,Run 7,Failed,Failed
+Defensive,Gemini in Chrome,Run 8,Failed,Failed
+Defensive,Gemini in Chrome,Run 9,Failed,Failed
+Defensive,Gemini in Chrome,Run 10,Failed,Failed
+Defensive,Edge Copilot,Run 1,Failed,Failed
+Defensive,Edge Copilot,Run 2,Failed,Failed
+Defensive,Edge Copilot,Run 3,Failed,Failed
+Defensive,Edge Copilot,Run 4,Failed,Failed
+Defensive,Edge Copilot,Run 5,Failed,Failed
+Defensive,Edge Copilot,Run 6,Failed,Failed
+Defensive,Edge Copilot,Run 7,Failed,Failed
+Defensive,Edge Copilot,Run 8,Failed,Failed
+Defensive,Edge Copilot,Run 9,Failed,Failed
+Defensive,Edge Copilot,Run 10,Failed,Failed
+Defensive,Brave Leo,Run 1,Failed,Failed
+Defensive,Brave Leo,Run 2,Failed,Failed
+Defensive,Brave Leo,Run 3,Failed,Failed
+Defensive,Brave Leo,Run 4,Failed,Failed
+Defensive,Brave Leo,Run 5,Failed,Failed
+Defensive,Brave Leo,Run 6,Failed,Failed
+Defensive,Brave Leo,Run 7,Failed,Failed
+Defensive,Brave Leo,Run 8,Failed,Failed
+Defensive,Brave Leo,Run 9,Failed,Failed
+Defensive,Brave Leo,Run 10,Failed,Failed
+Defensive,ChatGPT,Run 1,Worked,Worked
+Defensive,ChatGPT,Run 2,Worked,Worked
+Defensive,ChatGPT,Run 3,Worked,Worked
+Defensive,ChatGPT,Run 4,Worked,Worked
+Defensive,ChatGPT,Run 5,Worked,Worked
+Defensive,ChatGPT,Run 6,Worked,Worked
+Defensive,ChatGPT,Run 7,Worked,Worked
+Defensive,ChatGPT,Run 8,Worked,Worked
+Defensive,ChatGPT,Run 9,Worked,Worked
+Defensive,ChatGPT,Run 10,Worked,Worked
+Defensive,Claude,Run 1,Failed,Failed
+Defensive,Claude,Run 2,Failed,Failed
+Defensive,Claude,Run 3,Failed,Failed
+Defensive,Claude,Run 4,Failed,Failed
+Defensive,Claude,Run 5,Failed,Failed
+Defensive,Claude,Run 6,Failed,Failed
+Defensive,Claude,Run 7,Failed,Failed
+Defensive,Claude,Run 8,Failed,Failed
+Defensive,Claude,Run 9,Failed,Failed
+Defensive,Claude,Run 10,Failed,Failed
+Defensive,Gemini,Run 1,Failed,Failed
+Defensive,Gemini,Run 2,Failed,Failed
+Defensive,Gemini,Run 3,Failed,Failed
+Defensive,Gemini,Run 4,Failed,Failed
+Defensive,Gemini,Run 5,Failed,Failed
+Defensive,Gemini,Run 6,Failed,Failed
+Defensive,Gemini,Run 7,Failed,Failed
+Defensive,Gemini,Run 8,Failed,Failed
+Defensive,Gemini,Run 9,Failed,Failed
+Defensive,Gemini,Run 10,Failed,Failed
+Defensive,Crawl4AI,Run 1,Failed,Failed
+Defensive,Crawl4AI,Run 2,Failed,Failed
+Defensive,Crawl4AI,Run 3,Failed,Failed
+Defensive,Crawl4AI,Run 4,Failed,Failed
+Defensive,Crawl4AI,Run 5,Failed,Failed
+Defensive,Crawl4AI,Run 6,Failed,Failed
+Defensive,Crawl4AI,Run 7,Failed,Failed
+Defensive,Crawl4AI,Run 8,Failed,Failed
+Defensive,Crawl4AI,Run 9,Failed,Failed
+Defensive,Crawl4AI,Run 10,Failed,Failed
+Defensive_Repeat3,Comet,Run 1,Partial,Partial
+Defensive_Repeat3,Comet,Run 2,Partial,Partial
+Defensive_Repeat3,Comet,Run 3,Partial,Partial
+Defensive_Repeat3,Comet,Run 4,Partial,Partial
+Defensive_Repeat3,Comet,Run 5,Failed,Failed
+Defensive_Repeat3,Comet,Run 6,Failed,Failed
+Defensive_Repeat3,Comet,Run 7,Failed,Failed
+Defensive_Repeat3,Comet,Run 8,Failed,Failed
+Defensive_Repeat3,Comet,Run 9,Failed,Failed
+Defensive_Repeat3,Comet,Run 10,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 1,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 2,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 3,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 4,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 5,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 6,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 7,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 8,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 9,Failed,Failed
+Defensive_Repeat3,Amazon Nova,Run 10,Failed,Failed
+Defensive_Repeat3,Manus,Run 1,Worked,Worked
+Defensive_Repeat3,Manus,Run 2,Worked,Worked
+Defensive_Repeat3,Manus,Run 3,Worked,Worked
+Defensive_Repeat3,Manus,Run 4,Partial,Partial
+Defensive_Repeat3,Manus,Run 5,Partial,Partial
+Defensive_Repeat3,Manus,Run 6,Partial,Partial
+Defensive_Repeat3,Manus,Run 7,Partial,Partial
+Defensive_Repeat3,Manus,Run 8,Partial,Partial
+Defensive_Repeat3,Manus,Run 9,Worked,Failed
+Defensive_Repeat3,Manus,Run 10,Worked,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 1,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 2,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 3,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 4,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 5,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 6,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 7,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 8,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 9,Failed,Failed
+Defensive_Repeat3,Devtools MCP(Claude),Run 10,Failed,Failed
+Defensive_Repeat3,Director.ai,Run 1,Worked,Worked
+Defensive_Repeat3,Director.ai,Run 2,Worked,Worked
+Defensive_Repeat3,Director.ai,Run 3,Worked,Worked
+Defensive_Repeat3,Director.ai,Run 4,Partial,Partial
+Defensive_Repeat3,Director.ai,Run 5,Partial,Partial
+Defensive_Repeat3,Director.ai,Run 6,Partial,Partial
+Defensive_Repeat3,Director.ai,Run 7,Partial,Partial
+Defensive_Repeat3,Director.ai,Run 8,Partial,Partial
+Defensive_Repeat3,Director.ai,Run 9,Failed,Failed
+Defensive_Repeat3,Director.ai,Run 10,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 1,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 2,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 3,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 4,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 5,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 6,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 7,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 8,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 9,Failed,Failed
+Defensive_Repeat3,ChatGPT Atlas,Run 10,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 1,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 2,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 3,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 4,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 5,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 6,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 7,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 8,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 9,Failed,Failed
+Defensive_Repeat3,Claude for Chrome,Run 10,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 1,Partial,Partial
+Defensive_Repeat3,Gemini in Chrome,Run 2,Partial,Partial
+Defensive_Repeat3,Gemini in Chrome,Run 3,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 4,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 5,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 6,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 7,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 8,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 9,Failed,Failed
+Defensive_Repeat3,Gemini in Chrome,Run 10,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 1,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 2,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 3,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 4,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 5,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 6,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 7,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 8,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 9,Failed,Failed
+Defensive_Repeat3,Edge Copilot,Run 10,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 1,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 2,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 3,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 4,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 5,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 6,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 7,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 8,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 9,Failed,Failed
+Defensive_Repeat3,Brave Leo,Run 10,Failed,Failed
+Defensive_Repeat3,ChatGPT,Run 1,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 2,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 3,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 4,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 5,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 6,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 7,Failed,Worked
+Defensive_Repeat3,ChatGPT,Run 8,Partial,Partial
+Defensive_Repeat3,ChatGPT,Run 9,Partial,Partial
+Defensive_Repeat3,ChatGPT,Run 10,Failed,Failed
+Defensive_Repeat3,Claude,Run 1,Worked,Worked
+Defensive_Repeat3,Claude,Run 2,Worked,Worked
+Defensive_Repeat3,Claude,Run 3,Worked,Worked
+Defensive_Repeat3,Claude,Run 4,Worked,Worked
+Defensive_Repeat3,Claude,Run 5,Worked,Worked
+Defensive_Repeat3,Claude,Run 6,Worked,Worked
+Defensive_Repeat3,Claude,Run 7,Worked,Worked
+Defensive_Repeat3,Claude,Run 8,Worked,Worked
+Defensive_Repeat3,Claude,Run 9,Partial,Partial
+Defensive_Repeat3,Claude,Run 10,Partial,Partial
+Defensive_Repeat3,Gemini,Run 1,Failed,Failed
+Defensive_Repeat3,Gemini,Run 2,Failed,Failed
+Defensive_Repeat3,Gemini,Run 3,Failed,Failed
+Defensive_Repeat3,Gemini,Run 4,Failed,Failed
+Defensive_Repeat3,Gemini,Run 5,Failed,Failed
+Defensive_Repeat3,Gemini,Run 6,Failed,Failed
+Defensive_Repeat3,Gemini,Run 7,Failed,Failed
+Defensive_Repeat3,Gemini,Run 8,Failed,Failed
+Defensive_Repeat3,Gemini,Run 9,Failed,Failed
+Defensive_Repeat3,Gemini,Run 10,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 1,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 2,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 3,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 4,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 5,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 6,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 7,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 8,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 9,Failed,Failed
+Defensive_Repeat3,Crawl4AI,Run 10,Failed,Failed
+Defensive_Repeat5,Comet,Run 1,Worked,Worked
+Defensive_Repeat5,Comet,Run 2,Partial,Partial
+Defensive_Repeat5,Comet,Run 3,Partial,Partial
+Defensive_Repeat5,Comet,Run 4,Partial,Partial
+Defensive_Repeat5,Comet,Run 5,Partial,Partial
+Defensive_Repeat5,Comet,Run 6,Partial,Partial
+Defensive_Repeat5,Comet,Run 7,Partial,Partial
+Defensive_Repeat5,Comet,Run 8,Failed,Failed
+Defensive_Repeat5,Comet,Run 9,Failed,Failed
+Defensive_Repeat5,Comet,Run 10,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 1,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 2,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 3,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 4,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 5,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 6,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 7,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 8,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 9,Failed,Failed
+Defensive_Repeat5,Amazon Nova,Run 10,Failed,Failed
+Defensive_Repeat5,Manus,Run 1,Worked,Worked
+Defensive_Repeat5,Manus,Run 2,Worked,Worked
+Defensive_Repeat5,Manus,Run 3,Worked,Worked
+Defensive_Repeat5,Manus,Run 4,Worked,Worked
+Defensive_Repeat5,Manus,Run 5,Worked,Worked
+Defensive_Repeat5,Manus,Run 6,Worked,Worked
+Defensive_Repeat5,Manus,Run 7,Partial,Partial
+Defensive_Repeat5,Manus,Run 8,Partial,Partial
+Defensive_Repeat5,Manus,Run 9,Partial,Partial
+Defensive_Repeat5,Manus,Run 10,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 1,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 2,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 3,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 4,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 5,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 6,Partial,Partial
+Defensive_Repeat5,Devtools MCP(Claude),Run 7,Failed,Failed
+Defensive_Repeat5,Devtools MCP(Claude),Run 8,Failed,Failed
+Defensive_Repeat5,Devtools MCP(Claude),Run 9,Failed,Failed
+Defensive_Repeat5,Devtools MCP(Claude),Run 10,Failed,Failed
+Defensive_Repeat5,Director.ai,Run 1,Worked,Worked
+Defensive_Repeat5,Director.ai,Run 2,Worked,Worked
+Defensive_Repeat5,Director.ai,Run 3,Worked,Worked
+Defensive_Repeat5,Director.ai,Run 4,Partial,Partial
+Defensive_Repeat5,Director.ai,Run 5,Partial,Partial
+Defensive_Repeat5,Director.ai,Run 6,Partial,Partial
+Defensive_Repeat5,Director.ai,Run 7,Partial,Partial
+Defensive_Repeat5,Director.ai,Run 8,Failed,Failed
+Defensive_Repeat5,Director.ai,Run 9,Failed,Failed
+Defensive_Repeat5,Director.ai,Run 10,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 1,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 2,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 3,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 4,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 5,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 6,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 7,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 8,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 9,Failed,Failed
+Defensive_Repeat5,ChatGPT Atlas,Run 10,Failed,Failed
+Defensive_Repeat5,Claude for Chrome,Run 1,Partial,Partial
+Defensive_Repeat5,Claude for Chrome,Run 2,Partial,Partial
+Defensive_Repeat5,Claude for Chrome,Run 3,Partial,Partial
+Defensive_Repeat5,Claude for Chrome,Run 4,Partial,Partial
+Defensive_Repeat5,Claude for Chrome,Run 5,Partial,Partial
+Defensive_Repeat5,Claude for Chrome,Run 6,Failed,Failed
+Defensive_Repeat5,Claude for Chrome,Run 7,Failed,Failed
+Defensive_Repeat5,Claude for Chrome,Run 8,Failed,Failed
+Defensive_Repeat5,Claude for Chrome,Run 9,Failed,Failed
+Defensive_Repeat5,Claude for Chrome,Run 10,Failed,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 1,Partial,Partial
+Defensive_Repeat5,Gemini in Chrome,Run 2,Partial,Partial
+Defensive_Repeat5,Gemini in Chrome,Run 3,Partial,Partial
+Defensive_Repeat5,Gemini in Chrome,Run 4,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 5,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 6,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 7,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 8,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 9,Partial,Failed
+Defensive_Repeat5,Gemini in Chrome,Run 10,Partial,Failed
+Defensive_Repeat5,Edge Copilot,Run 1,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 2,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 3,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 4,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 5,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 6,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 7,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 8,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 9,Failed,Failed
+Defensive_Repeat5,Edge Copilot,Run 10,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 1,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 2,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 3,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 4,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 5,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 6,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 7,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 8,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 9,Failed,Failed
+Defensive_Repeat5,Brave Leo,Run 10,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 1,Worked,Worked
+Defensive_Repeat5,ChatGPT,Run 2,Worked,Worked
+Defensive_Repeat5,ChatGPT,Run 3,Partial,Partial
+Defensive_Repeat5,ChatGPT,Run 4,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 5,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 6,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 7,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 8,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 9,Failed,Failed
+Defensive_Repeat5,ChatGPT,Run 10,Failed,Failed
+Defensive_Repeat5,Claude,Run 1,Worked,Worked
+Defensive_Repeat5,Claude,Run 2,Worked,Worked
+Defensive_Repeat5,Claude,Run 3,Worked,Worked
+Defensive_Repeat5,Claude,Run 4,Partial,Partial
+Defensive_Repeat5,Claude,Run 5,Partial,Partial
+Defensive_Repeat5,Claude,Run 6,Partial,Partial
+Defensive_Repeat5,Claude,Run 7,Partial,Partial
+Defensive_Repeat5,Claude,Run 8,Partial,Partial
+Defensive_Repeat5,Claude,Run 9,Partial,Partial
+Defensive_Repeat5,Claude,Run 10,Partial,Partial
+Defensive_Repeat5,Gemini,Run 1,Failed,Failed
+Defensive_Repeat5,Gemini,Run 2,Failed,Failed
+Defensive_Repeat5,Gemini,Run 3,Failed,Failed
+Defensive_Repeat5,Gemini,Run 4,Failed,Failed
+Defensive_Repeat5,Gemini,Run 5,Failed,Failed
+Defensive_Repeat5,Gemini,Run 6,Failed,Failed
+Defensive_Repeat5,Gemini,Run 7,Failed,Failed
+Defensive_Repeat5,Gemini,Run 8,Failed,Failed
+Defensive_Repeat5,Gemini,Run 9,Failed,Failed
+Defensive_Repeat5,Gemini,Run 10,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 1,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 2,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 3,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 4,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 5,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 6,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 7,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 8,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 9,Failed,Failed
+Defensive_Repeat5,Crawl4AI,Run 10,Failed,Failed
+Defensive_Repeat7,Comet,Run 1,Worked,Worked
+Defensive_Repeat7,Comet,Run 2,Worked,Worked
+Defensive_Repeat7,Comet,Run 3,Partial,Partial
+Defensive_Repeat7,Comet,Run 4,Partial,Partial
+Defensive_Repeat7,Comet,Run 5,Partial,Partial
+Defensive_Repeat7,Comet,Run 6,Partial,Partial
+Defensive_Repeat7,Comet,Run 7,Partial,Partial
+Defensive_Repeat7,Comet,Run 8,Partial,Partial
+Defensive_Repeat7,Comet,Run 9,Partial,Partial
+Defensive_Repeat7,Comet,Run 10,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 1,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 2,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 3,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 4,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 5,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 6,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 7,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 8,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 9,Failed,Failed
+Defensive_Repeat7,Amazon Nova,Run 10,Failed,Failed
+Defensive_Repeat7,Manus,Run 1,Partial,Worked
+Defensive_Repeat7,Manus,Run 2,Partial,Worked
+Defensive_Repeat7,Manus,Run 3,Partial,Worked
+Defensive_Repeat7,Manus,Run 4,Partial,Worked
+Defensive_Repeat7,Manus,Run 5,Partial,Worked
+Defensive_Repeat7,Manus,Run 6,Partial,Worked
+Defensive_Repeat7,Manus,Run 7,Partial,Worked
+Defensive_Repeat7,Manus,Run 8,Partial,Partial
+Defensive_Repeat7,Manus,Run 9,Partial,Partial
+Defensive_Repeat7,Manus,Run 10,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 1,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 2,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 3,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 4,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 5,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 6,Partial,Partial
+Defensive_Repeat7,Devtools MCP(Claude),Run 7,Failed,Failed
+Defensive_Repeat7,Devtools MCP(Claude),Run 8,Failed,Failed
+Defensive_Repeat7,Devtools MCP(Claude),Run 9,Failed,Failed
+Defensive_Repeat7,Devtools MCP(Claude),Run 10,Failed,Failed
+Defensive_Repeat7,Director.ai,Run 1,Worked,Worked
+Defensive_Repeat7,Director.ai,Run 2,Worked,Worked
+Defensive_Repeat7,Director.ai,Run 3,Worked,Worked
+Defensive_Repeat7,Director.ai,Run 4,Partial,Partial
+Defensive_Repeat7,Director.ai,Run 5,Partial,Partial
+Defensive_Repeat7,Director.ai,Run 6,Partial,Partial
+Defensive_Repeat7,Director.ai,Run 7,Partial,Partial
+Defensive_Repeat7,Director.ai,Run 8,Failed,Failed
+Defensive_Repeat7,Director.ai,Run 9,Failed,Failed
+Defensive_Repeat7,Director.ai,Run 10,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 1,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 2,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 3,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 4,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 5,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 6,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 7,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 8,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 9,Failed,Failed
+Defensive_Repeat7,ChatGPT Atlas,Run 10,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 1,Partial,Partial
+Defensive_Repeat7,Claude for Chrome,Run 2,Partial,Partial
+Defensive_Repeat7,Claude for Chrome,Run 3,Partial,Partial
+Defensive_Repeat7,Claude for Chrome,Run 4,Partial,Partial
+Defensive_Repeat7,Claude for Chrome,Run 5,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 6,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 7,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 8,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 9,Failed,Failed
+Defensive_Repeat7,Claude for Chrome,Run 10,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 1,Partial,Partial
+Defensive_Repeat7,Gemini in Chrome,Run 2,Partial,Partial
+Defensive_Repeat7,Gemini in Chrome,Run 3,Partial,Partial
+Defensive_Repeat7,Gemini in Chrome,Run 4,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 5,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 6,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 7,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 8,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 9,Failed,Failed
+Defensive_Repeat7,Gemini in Chrome,Run 10,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 1,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 2,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 3,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 4,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 5,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 6,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 7,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 8,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 9,Failed,Failed
+Defensive_Repeat7,Edge Copilot,Run 10,Failed,Failed
+Defensive_Repeat7,Brave Leo,Run 1,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 2,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 3,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 4,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 5,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 6,Failed,Partial
+Defensive_Repeat7,Brave Leo,Run 7,Failed,Failed
+Defensive_Repeat7,Brave Leo,Run 8,Failed,Failed
+Defensive_Repeat7,Brave Leo,Run 9,Failed,Failed
+Defensive_Repeat7,Brave Leo,Run 10,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 1,Worked,Worked
+Defensive_Repeat7,ChatGPT,Run 2,Worked,Worked
+Defensive_Repeat7,ChatGPT,Run 3,Partial,Partial
+Defensive_Repeat7,ChatGPT,Run 4,Partial,Partial
+Defensive_Repeat7,ChatGPT,Run 5,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 6,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 7,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 8,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 9,Failed,Failed
+Defensive_Repeat7,ChatGPT,Run 10,Failed,Failed
+Defensive_Repeat7,Claude,Run 1,Partial,Partial
+Defensive_Repeat7,Claude,Run 2,Partial,Partial
+Defensive_Repeat7,Claude,Run 3,Partial,Partial
+Defensive_Repeat7,Claude,Run 4,Partial,Partial
+Defensive_Repeat7,Claude,Run 5,Partial,Partial
+Defensive_Repeat7,Claude,Run 6,Partial,Partial
+Defensive_Repeat7,Claude,Run 7,Partial,Partial
+Defensive_Repeat7,Claude,Run 8,Partial,Partial
+Defensive_Repeat7,Claude,Run 9,Partial,Partial
+Defensive_Repeat7,Claude,Run 10,Partial,Partial
+Defensive_Repeat7,Gemini,Run 1,Failed,Failed
+Defensive_Repeat7,Gemini,Run 2,Failed,Failed
+Defensive_Repeat7,Gemini,Run 3,Failed,Failed
+Defensive_Repeat7,Gemini,Run 4,Failed,Failed
+Defensive_Repeat7,Gemini,Run 5,Failed,Failed
+Defensive_Repeat7,Gemini,Run 6,Failed,Failed
+Defensive_Repeat7,Gemini,Run 7,Failed,Failed
+Defensive_Repeat7,Gemini,Run 8,Failed,Failed
+Defensive_Repeat7,Gemini,Run 9,Failed,Failed
+Defensive_Repeat7,Gemini,Run 10,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 1,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 2,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 3,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 4,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 5,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 6,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 7,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 8,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 9,Failed,Failed
+Defensive_Repeat7,Crawl4AI,Run 10,Failed,Failed

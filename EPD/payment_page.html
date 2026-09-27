@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Text</title>
+</head>
+<body style="height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;margin:0;font-family:sans-serif;">
+  <h1>Fingerprint Hahaaaa......</h1>
+</body>
+<script>
+  fetch('/track', {                                                                                    
+    method: 'POST',                                                                                      
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ event: 'fingerprint', time: Date.now() })                                         
+  }); 
+</script>
+</html>

@@ -1,0 +1,12 @@
+.zero-text-injection {
+    position: absolute;
+    top: 0; left: 0;
+    color: transparent !important;
+    font-size: 0px !important;
+    line-height: 0 !important;
+    clip: rect(0, 0, 0, 0);
+    width: 1px; height: 1px;
+    overflow: hidden;
+    user-select: text;
+}
+

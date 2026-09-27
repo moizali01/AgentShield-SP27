@@ -1,0 +1,601 @@
+excluding dynamicForm/comet
+excluding simpleForm/comet
+dropping 3 stray session(s) with no form activity: ['sess_hmsrmhikw', 'sess_h01xyk5xy', 'sess_hep6mi4li']
+
+loaded 131 sessions across 9 agents
+
+=== simpleForm ===  74 sessions | agent(1): 69  human(0): 5
+agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, director, manus, nova
+5-fold ROC-AUC: 1.000 +/- 0.000
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+dwellTimeMean    -1.434
+mouseMoves       -1.070
+dwellTimeStdev   -0.319
+durationMs        0.309
+reactionMin       0.308
+keypresses       -0.288
+has_dwell        -0.283
+reactionMax       0.235
+reactionMean      0.118
+mouseClicks      -0.079
+has_keypress     -0.032
+reactionMedian    0.029
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  57 sessions | agent(1): 51  human(0): 6
+agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, nova
+5-fold ROC-AUC: 1.000 +/- 0.000
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+dwellTimeMean    -1.420
+mouseMoves       -1.039
+mouseClicks      -0.456
+reactionMin       0.452
+reactionMax       0.428
+reactionMean      0.425
+reactionMedian    0.383
+dwellTimeStdev   -0.366
+durationMs        0.310
+keypresses       -0.290
+has_keypress     -0.229
+has_dwell        -0.127
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 74 sessions, CV AUC 1.000)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, director, manus, nova
+
+scoring: logs/simpleForm/comet
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_mgwtucl47          7968       122026.0           9          31           17      149306          1   0.000000
+sess_oj4x1mqks          7919            NaN           9          31           17       75788          0   0.996891
+sess_khi5r3fvc          8333            NaN           9          41           15       81742          0   0.992075
+sess_1ccplq23g          8509            NaN           9          27           17       64542          0   0.997304
+sess_2odmvype0          7255            NaN           9          22           17       62504          0   0.995696
+sess_vrj15utx0          7135            NaN           9          39           15       60823          0   0.991237
+sess_hix3li4tn          7499            NaN           9          22           17       56859          0   0.997417
+sess_te81iv8v2          7419            NaN           9          26           17       59442          0   0.994984
+sess_pu7clqe1o          8899            NaN          12          34           21       80114          0   0.994168
+
+============================================================
+comet: difference score = 0.884 (std 0.332)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 57 sessions, CV AUC 1.000)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, nova
+
+scoring: logs/dynamicForm/comet
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell    bot_score
+sess_og01zg0i9         18651       2.333333           5          19            4      108418          1 9.995317e-01
+sess_e8tww1h99         16277            NaN           7          20            9      142461          0 9.990062e-01
+sess_3sk7mwa5u         12265            NaN           8          41            8      121339          0 9.973763e-01
+sess_h5zlr9ez8         17257       1.500000           8          16            8      130819          1 9.985561e-01
+sess_mbrlohxv4         20747            NaN           6           9            8      135635          0 9.996140e-01
+sess_ngi0bhbgg         13012     115.833333           8           7            3      198048          1 5.395990e-01
+sess_dfu9au9td         17567            NaN           8          45           10      131309          0 9.985568e-01
+sess_r65x546g4         10265     518.800000           7          49            5      104073          1 2.232527e-12
+sess_370lcl9zj         16809     144.500000           8          27            6      118466          1 4.347953e-01
+sess_uzcurdycw         18331    3139.000000           6          25            9      110673          1 1.070292e-53
+
+============================================================
+comet: difference score = 0.697 (std 0.423)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+excluding dynamicForm/nova
+excluding simpleForm/nova
+dropping 1 stray session(s) with no form activity: ['sess_h01xyk5xy']
+
+loaded 130 sessions across 9 agents
+
+=== simpleForm ===  73 sessions | agent(1): 68  human(0): 5
+agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus
+5-fold ROC-AUC: 0.986 +/- 0.029
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+dwellTimeStdev   -1.387
+mouseMoves       -1.379
+has_dwell        -0.611
+durationMs        0.478
+keypresses       -0.173
+mouseClicks      -0.165
+reactionMax       0.156
+reactionMin      -0.128
+has_keypress     -0.126
+reactionMedian   -0.047
+dwellTimeMean     0.026
+reactionMean      0.010
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  57 sessions | agent(1): 51  human(0): 6
+agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet
+5-fold ROC-AUC: 0.980 +/- 0.040
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.876
+mouseClicks      -1.077
+reactionMean      0.500
+durationMs        0.495
+reactionMedian    0.480
+reactionMax       0.476
+reactionMin       0.432
+has_keypress     -0.369
+has_dwell        -0.364
+keypresses       -0.300
+dwellTimeMean    -0.192
+dwellTimeStdev   -0.108
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 73 sessions, CV AUC 0.986)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus
+
+scoring: logs/simpleForm/nova
+
+dropping 1 stray session(s) with no form activity: ['sess_hep6mi4li']
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_pox8p6cyo       13625.0      49.304348          18          16           13      102531          1   0.089893
+sess_3s32mj7hv       12628.0      46.565217          18          16           13       95045          1   0.085663
+sess_z2odz2nbf       12677.0      48.521739          18          16           13       95532          1   0.087494
+sess_jd5imdics       13065.0      53.478261          18          16           13       98536          1   0.048891
+sess_7jr6am8f9       12326.0      46.913043          18          16           13       93045          1   0.101434
+sess_ssv0wu436       13274.0      49.521739          18          16           13      100030          1   0.090309
+sess_8ecezbhrh       13214.0      53.739130          18          16           13      100528          1   0.090955
+sess_4akqd95nr       13026.0      47.608696          18          16           13       97031          1   0.106891
+sess_0yt6udyte       12528.0      46.826087          18          16           13       94532          1   0.077475
+sess_rgkn9zjx8       13779.0      47.782609          18          16           13      103537          1   0.070513
+
+============================================================
+nova: difference score = 0.085 (std 0.016)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 57 sessions, CV AUC 0.980)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet
+
+scoring: logs/dynamicForm/nova
+
+dropping 1 stray session(s) with no form activity: ['sess_hmsrmhikw']
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_9868z6nmq       16888.0      59.235294          11          21           11      109534          1   0.988777
+sess_ideyxu04c       17738.0      62.294118          11          18           11      115066          1   0.991572
+sess_myqzpdue2       16352.0      59.882353          11          24           16      147553          1   0.971700
+sess_aez491qrr       16650.0      59.294118          11          18           11      109041          1   0.989165
+sess_ta6yua10j       16428.0      58.941176          11          18           11      106996          1   0.987600
+sess_pwlbm21r4       16949.0      59.235294          11          18           11      110532          1   0.989229
+sess_ottidz0ly       16992.0      58.647059          11          18           11      110035          1   0.989794
+sess_33n74836l       18073.0      60.000000          11          18           11      121041          1   0.992246
+sess_uppktkdl5       17526.0      60.058824          11          18           11      114542          1   0.991548
+sess_zug7cnmtr       17362.0      60.000000          11          18           11      114049          1   0.991324
+
+============================================================
+nova: difference score = 0.988 (std 0.006)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+excluding simpleForm/manus
+dropping 3 stray session(s) with no form activity: ['sess_hmsrmhikw', 'sess_h01xyk5xy', 'sess_hep6mi4li']
+
+loaded 141 sessions across 9 agents
+
+=== simpleForm ===  74 sessions | agent(1): 69  human(0): 5
+agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, nova
+5-fold ROC-AUC: 0.986 +/- 0.029
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.824
+dwellTimeStdev   -0.844
+has_dwell        -0.758
+durationMs        0.620
+keypresses       -0.384
+reactionMedian   -0.319
+reactionMin       0.291
+reactionMax       0.269
+has_keypress     -0.067
+mouseClicks      -0.064
+dwellTimeMean     0.032
+reactionMean      0.010
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  67 sessions | agent(1): 61  human(0): 6
+agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, nova
+5-fold ROC-AUC: 0.967 +/- 0.041
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.888
+mouseClicks      -1.069
+reactionMean      0.520
+durationMs        0.508
+reactionMax       0.498
+reactionMedian    0.495
+reactionMin       0.447
+has_keypress     -0.352
+has_dwell        -0.347
+keypresses       -0.327
+dwellTimeMean    -0.199
+dwellTimeStdev   -0.099
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 74 sessions, CV AUC 0.986)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, nova
+
+scoring: logs/simpleForm/manus
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_aswefbyil   6978.000000       2.500000          10           0            6       48024          1   0.997461
+sess_1wwy1qud7   6895.857143       1.666667           9           0            5       45189          1   0.997451
+sess_5u66vsi59           NaN            NaN           9           2            2      205049          0   0.999716
+sess_dkj6nao6v  11294.000000      27.400000         182           5            5       80078          1   0.952906
+sess_5u66vxz14  11207.000000      29.962963         287          10           10      226956          1   0.959728
+sess_dkj6nao6g           NaN            NaN          12           2            2       15391          0   0.997859
+sess_5u66vxi74  11343.000000      28.329032         151           5            5       83274          1   0.962505
+sess_5u66vxi93  10684.000000      32.472603         140           5            5       82259          1   0.962584
+sess_dkj6nao6z  15333.000000      32.317568         145           7            7      112915          1   0.979637
+
+============================================================
+manus: difference score = 0.979 (std 0.020)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+excluding dynamicForm/claude
+excluding simpleForm/claude
+dropping 2 stray session(s) with no form activity: ['sess_hmsrmhikw', 'sess_hep6mi4li']
+
+loaded 130 sessions across 9 agents
+
+=== simpleForm ===  73 sessions | agent(1): 68  human(0): 5
+agents: atlas, chrome-devtools-mcp, chrome_autofill, comet, director, manus, nova
+5-fold ROC-AUC: 0.986 +/- 0.029
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.972
+dwellTimeStdev   -0.632
+durationMs        0.386
+has_dwell        -0.322
+reactionMax       0.280
+reactionMin       0.238
+keypresses       -0.167
+has_keypress     -0.145
+reactionMean      0.098
+reactionMedian   -0.085
+mouseClicks      -0.076
+dwellTimeMean     0.045
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  57 sessions | agent(1): 51  human(0): 6
+agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, comet, nova
+5-fold ROC-AUC: 0.960 +/- 0.080
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.873
+mouseClicks      -1.073
+reactionMean      0.483
+reactionMedian    0.482
+durationMs        0.460
+reactionMax       0.438
+keypresses       -0.383
+reactionMin       0.361
+has_dwell        -0.356
+has_keypress     -0.350
+dwellTimeMean    -0.180
+dwellTimeStdev   -0.090
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 73 sessions, CV AUC 0.986)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, comet, director, manus, nova
+
+scoring: logs/simpleForm/claude
+
+dropping 1 stray session(s) with no form activity: ['sess_h01xyk5xy']
+     sessionId  reactionMean dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_rqlcm0nn3    388.333333          None          12          28           10       46534          0   0.965843
+sess_sugte1ggm     13.111111          None          15          17            1       58445          0   0.987653
+sess_ywvdo4qsl    376.000000          None          12          96           11      406883          0   0.720649
+sess_q3fdnru2l   7605.000000          None          12          64            7      127701          0   0.892634
+sess_3yl92pjst   1552.000000          None          15          56            1      166845          0   0.913966
+sess_tu5q1gli0   2060.000000          None          12         101           10       66608          0   0.123108
+sess_i16jxzg0n    385.111111          None          12          14           10       71112          0   0.990042
+sess_tscntermh   3016.777778          None          12          28           10       68857          0   0.975571
+sess_hba6o8x66   1798.000000          None          12          67           10       69466          0   0.657926
+sess_uirpdwf88    385.444444          None          12          54           10       86735          0   0.842097
+
+============================================================
+claude: difference score = 0.807 (std 0.266)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 57 sessions, CV AUC 0.960)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, comet, nova
+
+scoring: logs/dynamicForm/claude
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_h55dv28hy      26253.00       2.000000         102         100           11      203109          1   0.951965
+sess_n24qh8q3h      13058.00       1.870968         102          35           10      103158          1   0.927238
+sess_oi4dbjp6d      19178.20       1.638889         140          18           11       97286          1   0.971156
+sess_bnsq9voi2      28533.00       1.843750         153          25           10      154341          1   0.996971
+sess_qvsjobnbm      17645.00       2.827586         102          28           10      143356          1   0.981111
+sess_ue8yynkyt      11655.00            NaN          15           5            1      160515          0   0.998744
+sess_ct1swx1eh      15734.25       2.931034         134          11            8      122439          1   0.987113
+sess_kjfpj9hdd      24335.00       2.000000         102          13            9      132110          1   0.996927
+sess_m8tfsk0zx      27759.00       2.142857          89          10           11      137535          1   0.997836
+sess_bl5zdc6a1      13220.00       2.041667         116          20           10      109547          1   0.947047
+
+============================================================
+claude: difference score = 0.976 (std 0.025)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+excluding dynamicForm/chrome-devtools-mcp
+excluding simpleForm/chrome-devtools-mcp
+dropping 3 stray session(s) with no form activity: ['sess_hmsrmhikw', 'sess_h01xyk5xy', 'sess_hep6mi4li']
+
+loaded 130 sessions across 9 agents
+
+=== simpleForm ===  73 sessions | agent(1): 68  human(0): 5
+agents: atlas, chrome_autofill, claude, comet, director, manus, nova
+5-fold ROC-AUC: 0.986 +/- 0.029
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.698
+has_dwell        -0.814
+keypresses       -0.737
+dwellTimeStdev   -0.723
+durationMs        0.633
+reactionMax       0.315
+reactionMin       0.206
+mouseClicks      -0.183
+reactionMean      0.142
+reactionMedian    0.089
+has_keypress     -0.078
+dwellTimeMean     0.036
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  57 sessions | agent(1): 51  human(0): 6
+agents: chatgpt_atlas, chrome_autofill, claude, comet, nova
+5-fold ROC-AUC: 0.960 +/- 0.080
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.643
+mouseClicks      -0.941
+keypresses       -0.701
+reactionMin       0.601
+reactionMean      0.526
+reactionMax       0.509
+durationMs        0.466
+reactionMedian    0.450
+has_dwell        -0.328
+has_keypress     -0.327
+dwellTimeMean    -0.172
+dwellTimeStdev   -0.102
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 73 sessions, CV AUC 0.986)
+train agents: atlas, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/simpleForm/chrome-devtools-mcp
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_3j4iuu2he   3876.000000       2.405797         239          25            8      127662          1   0.635767
+sess_fkduonry9   4932.000000       2.349398         236          50            9       77896          1   0.207272
+sess_covmmi1gp   6658.875000       2.730769          47           8            7       30317          1   0.974199
+sess_0soe3y9lf   1283.000000       3.952381          47          22            7       31530          1   0.921351
+sess_lwmqjzxcj    558.571429       2.000000         144          15            7       31981          1   0.802839
+sess_uon5la087    689.375000       1.772727         141           9            7       27265          1   0.855193
+sess_71bconv83    560.857143       3.294118          46          12            7       19512          1   0.945862
+sess_ft5jq7t9l    562.714286       2.739130          46          11            7       41873          1   0.957996
+sess_icl5ucg2q   1506.000000       3.875000          57          16            7       32697          1   0.923874
+sess_nh0qmzwfn   4817.625000       2.875000          48          11            8       49947          1   0.972724
+
+============================================================
+chrome-devtools-mcp: difference score = 0.820 (std 0.239)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 57 sessions, CV AUC 0.960)
+train agents: chatgpt_atlas, chrome_autofill, claude, comet, nova
+
+scoring: logs/dynamicForm/chrome-devtools-mcp
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_12xbl7k4u      10126.25       3.075472         148           3            2       54044          1   0.875887
+sess_kl2qzkixl      13117.40       2.333333         102           4            4      118462          1   0.973998
+sess_0koo105mg      11430.80       1.696970         135           4            4       67365          1   0.893703
+sess_m5qoi7xu7       8585.80       2.277778         146          13            3       65389          1   0.789482
+sess_uh143pra0       6146.60       1.740741         142           7            4       89098          1   0.768878
+sess_bqwy9opy3       9752.00       5.300000         120          13            4       60857          1   0.862692
+sess_8gtyqsia3       1778.00       2.648148          97          14            2       23878          1   0.687855
+sess_8l79tq7ok       4969.75       1.714286         128           8            2       48136          1   0.765436
+sess_nwca83ljt       2302.00       1.754717         109           1            1        9095          1   0.753086
+sess_9sj7b87a1       9724.00       2.300000          49          15           10       67593          1   0.882060
+
+============================================================
+chrome-devtools-mcp: difference score = 0.825 (std 0.086)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+dropping 3 stray session(s) with no form activity: ['sess_hmsrmhikw', 'sess_h01xyk5xy', 'sess_hep6mi4li']
+
+loaded 150 sessions across 10 agents
+
+=== simpleForm ===  83 sessions | agent(1): 78  human(0): 5
+agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+5-fold ROC-AUC: 0.988 +/- 0.025
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.861
+dwellTimeStdev   -0.857
+has_dwell        -0.814
+durationMs        0.641
+keypresses       -0.376
+reactionMax       0.305
+reactionMin       0.278
+reactionMedian   -0.234
+mouseClicks      -0.095
+has_keypress     -0.065
+reactionMean      0.046
+dwellTimeMean     0.033
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/simpleForm_model.joblib
+
+=== dynamicForm ===  67 sessions | agent(1): 61  human(0): 6
+agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, nova
+5-fold ROC-AUC: 0.967 +/- 0.041
+in-sample AUC: 1.000
+
+standardised coefficients (+ -> agent-like, - -> human-like):
+mouseMoves       -1.888
+mouseClicks      -1.069
+reactionMean      0.520
+durationMs        0.508
+reactionMax       0.498
+reactionMedian    0.495
+reactionMin       0.447
+has_keypress     -0.352
+has_dwell        -0.347
+keypresses       -0.327
+dwellTimeMean    -0.199
+dwellTimeStdev   -0.099
+
+saved -> /Users/moiz/Documents/UIC/Research/Papers/AgentShield-SP27/FormInteraction/model_output/dynamicForm_model.joblib
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 83 sessions, CV AUC 0.988)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/adaptive/simple/comet
+
+dropping 1 stray session(s) with no form activity: ['sess_4tn0xibvc']
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_ozzwzb8ql        7476.0            4.0          21          43           25      143985          1   0.962309
+sess_mu8k4kl2r        7549.0            NaN          12          44           15     1260697          0   1.000000
+sess_bxurlnroq        6107.0            NaN          12          14           14       51833          0   0.997903
+sess_bbjx2c3jk        7897.0           91.0          14          27           18      147918          1   0.145581
+sess_7gmsy3x0n        9397.0            NaN          12          22           15      130589          0   0.998941
+
+============================================================
+comet_adaptive: difference score = 0.821 (std 0.378)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 67 sessions, CV AUC 0.967)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, nova
+
+scoring: logs/adaptive/dynamic/comet
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_kpmic0t0n         16909          1.000           7          11           10      231894          1   0.997411
+sess_a9vnyahft         21579            NaN           8          24           11      208567          0   0.999614
+sess_mleaxufmw         21627            NaN           8          40           11      180861          0   0.999182
+sess_c375ph7n0         23314            NaN           8          32           11      222130          0   0.999684
+sess_ltmau5i10         22587          1.625          11          13           11     1963760          1   1.000000
+
+============================================================
+comet_adaptive: difference score = 0.999 (std 0.001)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 83 sessions, CV AUC 0.988)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/adaptive/simple/nova
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_1sv31fu29     13467.625      45.257143          22          18           15      264992          1   0.993715
+sess_1gh61fu54     11748.000      48.869565          17          15           12       88039          1   0.963819
+sess_1sv32ac13     11639.000      47.956522          17          15           12       87531          1   0.961382
+sess_1sv31fu39     11862.000      48.913043          17          15           12       88548          1   0.963203
+sess_au9sac4np     11696.000      48.826087          17          15           12       88039          1   0.959725
+
+============================================================
+nova_adaptive: difference score = 0.968 (std 0.014)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 83 sessions, CV AUC 0.988)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/adaptive/simple/manus
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_qwlhga9ox  1.522797e+06       1.187879         478           3            3     3536028          1   1.000000
+sess_1eeo7863u  2.440000e+04       2.428571         235           4            4      711281          1   0.999992
+sess_fj2wye3du  6.910344e+04       1.033333         728           6            6     2002242          1   1.000000
+sess_xcgrugiw4  1.125038e+04       1.623037         189          12           12      104967          1   0.989043
+sess_t115xdbln  1.198556e+04       1.517483         193           3            3      134563          1   0.995450
+sess_0wx719o6z  1.318000e+04       2.000000         225           3            3      178588          1   0.996744
+sess_7ncr2oyuz  2.441678e+04       1.842105         264          16           16      232355          1   0.996380
+sess_dtktqpjcr  1.288311e+04       1.441860         207           4            4      166281          1   0.997679
+
+============================================================
+manus_adaptive: difference score = 0.997 (std 0.004)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 83 sessions, CV AUC 0.988)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/adaptive/simple/claude
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_0yyxxgaj6       7388.00       2.459459         226          36           16      122129          1   0.927167
+sess_smlk4rhu3      10060.00       1.425000         207          32           15      179777          1   0.966081
+sess_28o195ggw       9228.00       1.578947         188          13           14      110324          1   0.980616
+sess_6svt1453i      12551.00       1.750000         177          25           12      133369          1   0.984353
+sess_9vobskflp       8310.25       1.647059         204          59           12      296493          1   0.961406
+
+============================================================
+claude_adaptive: difference score = 0.964 (std 0.023)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 67 sessions, CV AUC 0.967)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, nova
+
+scoring: logs/adaptive/dynamic/claude
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_17h465y3w        7340.0       2.268293         165          33           11      135964          1   0.866363
+sess_7lgijrc96       15066.0       2.555556          99          27            8      118735          1   0.989821
+sess_oc4pazdkf        7820.0       5.733333         102          58           10      212588          1   0.911356
+sess_4rdyodctn        7114.0       2.351351         173          27            9      200599          1   0.947972
+sess_m2xxiu8kd        5176.0       4.153846         143          27           10      162680          1   0.874238
+
+============================================================
+claude_adaptive: difference score = 0.918 (std 0.052)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: simpleForm_model.joblib  [--form]  (form=simpleForm, trained on 83 sessions, CV AUC 0.988)
+train agents: atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, director, manus, nova
+
+scoring: logs/adaptive/simple/devtools
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_6xdqffm8f  14687.111111       4.930556         220          18           14      205852          1   0.982419
+sess_620r3b2hl    538.166667      32.368421          44          13            6      663342          1   0.998331
+sess_3ra2ut963  10651.888889       1.575000         232          53            8      213435          1   0.896941
+sess_bsdqs2fbc   3073.500000       2.742857         129           6            6       51659          1   0.984355
+sess_d3nh3m80m    473.333333       2.394737         103           6            5       31893          1   0.980410
+
+============================================================
+devtools_adaptive: difference score = 0.968 (std 0.041)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human
+model: dynamicForm_model.joblib  [--form]  (form=dynamicForm, trained on 67 sessions, CV AUC 0.967)
+train agents: chatgpt_atlas, chrome-devtools-mcp, chrome_autofill, claude, comet, nova
+
+scoring: logs/adaptive/dynamic/devtools
+
+     sessionId  reactionMean  dwellTimeMean  keypresses  mouseMoves  mouseClicks  durationMs  has_dwell  bot_score
+sess_8bw640lqv      12191.00       8.323077         164          20            6       82696          1   0.963752
+sess_hoqhekndu      12235.00       3.690265         171          28            7      102978          1   0.949005
+sess_aw98l06it       7534.00       2.925926          38           7            3       89091          1   0.985085
+sess_okzzs3pc8      14782.80       3.081395         157          38           10      142868          1   0.936709
+sess_h5rpaz3ei       7784.75       2.678571         150          12            7      113439          1   0.936054
+
+============================================================
+devtools_adaptive: difference score = 0.954 (std 0.021)
+============================================================
+1.0 = looks fully automated, 0.0 = looks human

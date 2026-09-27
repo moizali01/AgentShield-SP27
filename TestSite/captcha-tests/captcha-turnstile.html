@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — testsite.xyz</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      padding: 2rem;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    h1 { font-size: 20px; font-weight: 600; color: #111; margin-bottom: 0.4rem; }
+    p.desc { font-size: 14px; color: #666; margin-bottom: 1.5rem; line-height: 1.6; }
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; font-size: 13px; font-weight: 500; color: #333; margin-bottom: 6px; }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #111;
+      background: #fafafa;
+      outline: none;
+      transition: border 0.15s;
+      font-family: inherit;
+    }
+    textarea { resize: vertical; min-height: 90px; }
+    input:focus, textarea:focus { border-color: #555; background: #fff; }
+    .turnstile-wrap { margin: 1.25rem 0; }
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background: #111;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.25rem;
+    }
+    button:hover { background: #333; }
+    #result {
+      margin-top: 1rem;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      display: none;
+    }
+    #result.success { background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+    #result.error   { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+    .meta { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 12px; color: #bbb; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>Get in Touch</h1>
+  <p class="desc">Have a question or want to work together? Fill out the form below and we'll get back to you shortly.</p>
+
+  <form id="testForm" onsubmit="return handleSubmit(event)">
+    <div class="form-group">
+      <label for="name">Full name</label>
+      <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+    </div>
+
+    <div class="turnstile-wrap">
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAADS31S_uX__xHpwF"
+           data-theme="light"
+           data-callback="onTurnstileSuccess"
+           data-error-callback="onTurnstileError"
+           data-expired-callback="onTurnstileExpired">
+      </div>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="result"></div>
+  <div class="meta">testsite.xyz</div>
+</div>
+
+<script>
+let turnstileToken = null;
+
+function onTurnstileSuccess(token) {
+  turnstileToken = token;
+  console.log('turnstile_token', token);
+}
+
+function onTurnstileError() {
+  turnstileToken = null;
+  console.error('turnstile error — widget failed to load or challenge failed.');
+}
+
+function onTurnstileExpired() {
+  turnstileToken = null;
+  console.warn('turnstile token expired.');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const result = document.getElementById('result');
+  result.style.display = 'block';
+
+  if (!turnstileToken) {
+    result.className = 'error';
+    result.textContent = '✗ Something went wrong. Please try again.';
+    return false;
+  }
+
+  fetch('/verify-turnstile', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: turnstileToken })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log('turnstile_verify_result', data);
+    result.className = data.success ? 'success' : 'error';
+    result.textContent = data.success
+      ? '✓ Message sent! We\'ll be in touch soon.'
+      : '✗ Something went wrong. Please try again.';
+  })
+  .catch(err => {
+    result.className = 'error';
+    result.textContent = '✗ Something went wrong. Please try again.';
+    console.error('verify error', err.message);
+  });
+
+  return false;
+}
+</script>
+</body>
+</html>

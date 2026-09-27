@@ -1,0 +1,61 @@
+/* It visually hides the element but keeps it in the DOM for bots */
+.other-field {
+    /* position: absolute;
+    left: -9999px;
+    top: -9999px; */
+    opacity: 1;
+}
+
+/* Styling for the result message */
+.message-box {
+    margin-top: 10px;
+    display: none;
+    background-color: #f0fdf4; /* green-50 */
+    color: #166534; /* green-800 */
+    border: 1px solid #bbf7d0; /* green-200 */
+    
+}
+.message-box.human {
+    display: block;
+    background-color: #f0fdf4; /* green-50 */
+    color: #166534; /* green-800 */
+    border: 1px solid #bbf7d0; /* green-200 */
+}
+.message-box.bot {
+    display: block;
+    background-color: #fef2f2; /* red-50 */
+    color: #991b1b; /* red-800 */
+    border: 1px solid #fecaca; /* red-200 */
+}
+
+
+/* override tailwind defaults for links */
+a:link {
+    color: blue;
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover {
+    color: darkblue;
+    text-decoration: underline;
+  }
+  a:active {
+    color: red;
+  }
+
+
+
+.link-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background-color: #3b82f6; 
+  text-decoration: none;
+}
+
+.link-dot:visited {
+  background-color: #9333ea; 
+}

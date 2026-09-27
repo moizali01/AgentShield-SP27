@@ -1,0 +1,12 @@
+human/
+.DS_Store
+node_modules/
+.claude/
+~*
+
+ip_map.csv
+redact_ips.py
+
+
+__pycache__/
+.venv/

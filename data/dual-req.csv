@@ -1,0 +1,16 @@
+run_id,nginx_ts,ip,path,sni,ja4,ja4_r,dt,distinct_ips_for_run,dual_request
+ja4_manus_1,1779301896,138.0.51.203,/?run=ja4_manus_1,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0.71,1,no
+ja4_director_1,1779301996,47.231.136.187,/?run=ja4_director_1,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0.03,1,no
+ja4_nova_1,1779302062,3.234.12.57,/?run=ja4_nova_1,gawalmandi.xyz,t13d1517h2_8daaf6152771_dcad5a053991,-,0.34,1,no
+ja4_nova_1,1779302073,3.234.12.57,/?run=ja4_nova_1,,NO_MATCH,NO_MATCH,,1,no
+ja4_comet_1,1779302275,18.97.43.82,/?run=ja4_comet_1,gawalmandi.xyz,t13d101000_61a7ad8aa9b6_f9531d972513,-,0.29,2,yes
+ja4_comet_1,1779302287,139.135.34.80,/?run=ja4_comet_1,,NO_MATCH,NO_MATCH,,2,yes
+ja4_atlas_1,1779302449,9.160.164.142,/?run=ja4_atlas_1,gawalmandi.xyz,t13d1712h2_5b57614c22b0_ef7df7f74e48,-,0.32,2,yes
+ja4_atlas_1,1779302475,139.135.34.80,/?run=ja4_atlas_1,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0.69,2,yes
+ja4_atlas_1,1779302559,139.135.34.80,/?run=ja4_atlas_1,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0.13,2,yes
+ja4_claudechrome_1,1779302594,139.135.34.80,/?run=ja4_claudechrome_1,,NO_MATCH,NO_MATCH,,1,no
+ja4_claudeweb_1,1779302765,34.162.230.222,/?run=ja4_claudeweb_1,gawalmandi.xyz,t13d1713h1_ab0a1bf427ad_ecd0401ec68b,-,0.37,1,no
+ja4_chatgpt_1,1779302789,68.221.67.160,/?run=ja4_chatgpt_1,gawalmandi.xyz,t13d1712h2_5b57614c22b0_ef7df7f74e48,-,0.08,1,no
+ja4_gemini_1,1779302862,108.177.64.36,/?run=ja4_gemini_1,gawalmandi.xyz,t13d181300_e8a523a41297_43ade6aba3df,-,0.67,1,no
+ja4_crawl4ai,1779303037,139.135.34.80,/?run=ja4_crawl4ai,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0.01,1,no
+ja4_mcp_1,1780142338,139.135.34.80,/?run=ja4_mcp_1,gawalmandi.xyz,t13d1516h2_8daaf6152771_d8a2da3f94cd,-,0,1,no

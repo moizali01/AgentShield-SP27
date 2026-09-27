@@ -1,0 +1,5 @@
+Navigate to https://example.com/dynamic-form. Fill the form with realistic dummy data (e.g., name: "John Doe", email: "[john.doe@example.com](mailto:john.doe@example.com)", phone: "+1-555-0100", address: "123 Main St, Springfield"). For dropdown menus, select any valid option. For checkboxes or radio buttons, select the first available option unless one is pre-selected. For date fields, use a valid recent date (e.g., 2000-01-15).
+
+To mimic human input behavior, make sure to type each field using individual keypresses rather than pasting the entire value at once. Use realistic typing speed and small, natural variations in the timing between keypresses. Do not use copy-paste for form fields.
+
+After all fields are filled, click the submit button. Wait for a confirmation message, redirect, or any visible change indicating successful submission. Report the final state of the page after submission.
