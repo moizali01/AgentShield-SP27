@@ -28,7 +28,7 @@ repositories.
 | Experiment | Package | Repository |
 |---|---|---|
 | Form interaction (§3.2) | `panda-forms` | https://github.com/moizali01/dynamic-forms-npm | 
-| Content modification (§3.3) | TODO | TODO: repository URL | 
+| Content modification (§3.3) | `content-modification` | https://github.com/NafisMahi/AgentShield-ContentModification-Package | 
 | EPD (§3.4) | `eipd` | https://github.com/moizali01/eipd-npm | 
 
 Each is an npm package that can be added to any website.
